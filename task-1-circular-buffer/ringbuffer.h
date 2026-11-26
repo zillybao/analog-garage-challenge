@@ -9,8 +9,8 @@
 typedef struct {
     uint8_t* storage;
     size_t capacity;
-    size_t head;
-    size_t tail;
+    _Atomic size_t head;
+    _Atomic size_t tail;
 } ringbuf_t;
 
 void ringbuf_init(ringbuf_t* rb, uint8_t* storage, size_t capacity);
